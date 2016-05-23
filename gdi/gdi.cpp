@@ -11,6 +11,8 @@
 using std::ofstream;
 using namespace std::chrono;
 
+const float FRAME_RATE_30 = 30;
+
 typedef struct {
 	HWND window;
 	HDC windowDC;
@@ -38,16 +40,15 @@ int main(int argc, char* argv[])
 	byte *bytes = new byte[size];
 
 	int index = 0, cur_index = 0;
-	HRESULT hr;
 
 	long long ts1 = 0, ts2 = 0;
-	int targetFramInterval = 1000 / 30;
+	int targetFramInterval = 1000 / (FRAME_RATE_30 + 0.5);
 
 	if (argc > 1){
 		std::cout << "target frame rate: " << argv[1] << std::endl;
-		int targetFrameRate = atoi(argv[1]);
+		float targetFrameRate = atof(argv[1]);
 		if (targetFrameRate > 0)
-			targetFramInterval = 1000 / targetFrameRate;
+			targetFramInterval = 1000 / (targetFrameRate + 0.5);
 	}
 
 	bool save_img = false;

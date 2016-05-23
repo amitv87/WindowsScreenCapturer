@@ -23,6 +23,8 @@ using namespace std::chrono;
 #pragma comment(lib, "dxgi.lib")
 #pragma comment(lib, "d3d11.lib")
 
+const int FRAME_RATE_30 = 30;
+
 long long getTS(){
 	return duration_cast< milliseconds >(system_clock::now().time_since_epoch()).count();
 }
@@ -69,14 +71,13 @@ int main(int argc, char* argv[])
 	HRESULT hr;
 
 	long long ts1 = 0, ts2 = 0;
-	int targetFramInterval = 1000 / 30;
+	int targetFramInterval = 1000 / (FRAME_RATE_30 + 0.5);
 
-
-	if (argc > 1){
+	if (argc > 1) {
 		std::cout << "target frame rate: " << argv[1] << std::endl;
-		int targetFrameRate = atoi(argv[1]);
+		float targetFrameRate = atof(argv[1]);
 		if (targetFrameRate > 0)
-			targetFramInterval = 1000 / targetFrameRate;
+			targetFramInterval = 1000 / (targetFrameRate + 0.5);
 	}
 
 	bool save_img = false;
