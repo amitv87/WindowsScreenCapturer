@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dxgi", "dxgi\dxgi.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gdi", "gdi\gdi.vcxproj", "{C432FD2F-1DD0-455D-8D54-C81184F1DA48}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mag", "mag\mag.vcxproj", "{58027334-9DBB-489D-9D62-F8D2E3F45904}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -31,6 +33,14 @@ Global
 		{C432FD2F-1DD0-455D-8D54-C81184F1DA48}.Release|Win32.Build.0 = Release|Win32
 		{C432FD2F-1DD0-455D-8D54-C81184F1DA48}.Release|x64.ActiveCfg = Release|Win32
 		{C432FD2F-1DD0-455D-8D54-C81184F1DA48}.Release|x64.Build.0 = Release|Win32
+		{58027334-9DBB-489D-9D62-F8D2E3F45904}.Debug|Win32.ActiveCfg = Debug|Win32
+		{58027334-9DBB-489D-9D62-F8D2E3F45904}.Debug|Win32.Build.0 = Debug|Win32
+		{58027334-9DBB-489D-9D62-F8D2E3F45904}.Debug|x64.ActiveCfg = Debug|x64
+		{58027334-9DBB-489D-9D62-F8D2E3F45904}.Debug|x64.Build.0 = Debug|x64
+		{58027334-9DBB-489D-9D62-F8D2E3F45904}.Release|Win32.ActiveCfg = Release|Win32
+		{58027334-9DBB-489D-9D62-F8D2E3F45904}.Release|Win32.Build.0 = Release|Win32
+		{58027334-9DBB-489D-9D62-F8D2E3F45904}.Release|x64.ActiveCfg = Release|x64
+		{58027334-9DBB-489D-9D62-F8D2E3F45904}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
